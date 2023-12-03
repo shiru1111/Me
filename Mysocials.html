@@ -2,17 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiruui</title>
-</head>
-<body style="background-color: bisque;"> 
-    <button id="page" class="Homepage?" onclick="myFunction(1)"   > <a href="websiteru.html"> ‹Homepage</a> </button>
-    <p> <img src="rabbit.jpg" width="1000" height="150" style="display: block; margin: auto;" ></p>
-    <h2 style="text-align: center;"> My socials! </h2>
-    <p style="text-align: center;"> <a href="https://www.youtube.com/@shiru2208/about" style="color: rgb(32, 32, 32);" style="text-align: center;"> ⁕ My Youtube </a></p>
-    <p style="text-align: center;"> <a href="https://www.twitch.tv/shirruui" style="color: rgb(32, 32, 32);" style="text-align: center;"> ⁕ My Twitch </a></p>
-    <p style="text-align: center;"> <a href="https://www.instagram.com/nyillxx/" style="color: rgb(32, 32, 32);" style="text-align: center;"> ⁕ My Instagram </a></p>
-    <p style="text-align: center;"> <a href="https://github.com/shiru1111" style="color: rgb(32, 32, 32);" style="text-align: center;"> ⁕ My Github</a></p>
+    <style>
+        body {
+            font-size: 14px;
+            text-align: center; 
+            position: relative; 
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
 
+        @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+        }
+
+        .button-spacing {
+            margin-bottom: 20px; 
+        }
+
+        .button-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .homepage-button {
+            background-color: darkgray;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .homepage-button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .homepage-button:hover {
+            background-color: gray;
+        }
+        .gif-container {
+            width: 500%;
+            max-width: 700px; 
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body bgcolor="#2D2D2D"> 
+    <div class="button-container">
+        <button id="bgButton" onclick="toggleBackground()">White</button>
+    </div>
+
+    <div style="text-align: left;">
+        <div class="homepage-button">
+            <a href="websiteru.html">‹Homepage</a>
+        </div>
+    </div>
+
+    <div class="gif-container">
+        <img src="stars.gif" alt="Stars GIF">
+    </div>
+    <h2 style="text-align: center; color: black;"> My socials! </h2>
+    <p style="text-align: center;"> <a href="https://www.youtube.com/@shiru2208/about" style="color: rgb(0, 0, 0);" style="text-align: center;"> ⁕ My Youtube </a></p>
+    <p style="text-align: center;"> <a href="https://www.twitch.tv/shirruui" style="color: rgb(0, 0, 0);" style="text-align: center;"> ⁕ My Twitch </a></p>
+    <p style="text-align: center;"> <a href="https://www.instagram.com/nyillxx/" style="color: rgb(0, 0, 0);" style="text-align: center;"> ⁕ My Instagram </a></p>
+    <p style="text-align: center;"> <a href="https://github.com/shiru1111" style="color: rgb(0, 0, 0);" style="text-align: center;"> ⁕ My Github</a></p>
+    <img src="2cat-removebg-preview.png" width="200" height="100" style="display: block; margin: auto;"/>
+    
+    <script>
+        var previousColor = '#2D2D2D';
+
+        function toggleBackground() {
+            var currentColor = document.body.style.backgroundColor;
+            var button = document.getElementById('bgButton');
+            
+            if (currentColor === 'white') {
+                document.body.style.backgroundColor = previousColor;
+                button.textContent = 'White';
+            } else {
+                previousColor = currentColor;
+                document.body.style.backgroundColor = 'white';
+                button.textContent = 'Dark';
+            }
+        }
+    </script>
 </body>
 </html>
