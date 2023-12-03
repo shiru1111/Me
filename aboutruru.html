@@ -2,30 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiruui</title>
-</head>
-<body style="background-color: bisque;">
-    <button id="page" class="Homepage?" onclick="myFunction(1)"   > <a href="websiteru.html"> ‹Homepage </a> </button>
-        <p> <img src="grass.jpg" width="1000" height="150" style="display: block; margin: auto;" ></p>
-    <h2 style="text-align: center; color: rgb(32, 32, 32);"> About me? </h2>
-        <p  style="text-align: center;" > <strong>About ruru:</strong> well it's me Shi(ruru) </p>
-    <h2 style="text-align: center;"> Hobbies </h2>
-        <ul style="text-align: center;"> »Playing online games </ul>
-        <ul style="text-align: center;"> »Drawing (Anime) </ul>
-        <ul style="text-align: center;"> »Playing instruments (Guitar, Drum)</ul>
-        <ul style="text-align: center;"> »Coding </ul>
-        <ul style="text-align: center;"> »Watching anime</ul>
+    <style>
+        body {
+            font-size: 14px;
+            text-align: center; 
+            position: relative; 
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
 
-    <h2 style="text-align: center;"> General info</h2>
-        <p style="text-align: center;"> <strong> Date of Birth</strong> Dec 23, 2004
-        <p style="text-align: center;"> <strong> Gender</strong> Male</p>
-        <p style="text-align: center;"> <strong> Phone </strong> 0912 448 3694</p>
-        <p style="text-align: center;"> <strong> Email </strong> shirutaa1@gmail.com</p>
+        @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+        }
+
+        .button-spacing {
+            margin-bottom: 20px; 
+        }
+
+        .button-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .homepage-button {
+            background-color: darkgray;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center; 
+        }
+
+        .homepage-button a {
+            color: white;
+            text-decoration: none;
+            margin-right: 8px; 
+        }
+
+        .homepage-button:hover {
+            background-color: gray;
+        }
+
+        .image-container {
+            position: relative;
+            margin-top: 15px; 
+        }
+        .gif-container {
+            width: 500%;
+            max-width: 700px; 
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body bgcolor="#2D2D2D">
+    <div class="button-container">
+        <button id="bgButton" onclick="toggleBackground()">White</button>
+    </div>
+
+    <div class="homepage-button">
+        <a href="websiteru.html">‹Homepage</a>
+    </div>
+
+    <div class="gif-container">
+        <img src="stars.gif" alt="Stars GIF">
+    </div>
+
+    <h2 style="text-align: center; color: black;"> About me? </h2>
+    <p style="text-align: center; color: black;"> <strong>About ruru:</strong> well it's me Shi(ruru) </p>
+    <h2 style="text-align: center; color: black"> Hobbies </h2>
+    <ul style="text-align: center; color: black"> »Playing online games </ul>
+    <ul style="text-align: center; color: black"> »Drawing (Anime) </ul>
+    <ul style="text-align: center; color: black"> »Playing instruments (Guitar, Drum)</ul>
+    <ul style="text-align: center; color: black"> »Coding </ul>
+    <ul style="text-align: center; color: black"> »Watching anime</ul>
+
+    <h2 style="text-align: center; color: black"> General info</h2>
+    <p style="text-align: center; color: black"> <strong> Date of Birth</strong> Dec 23, 2004 </p>
+    <p style="text-align: center; color: black"> <strong> Gender</strong> Male</p>
+    <p style="text-align: center; color: black"> <strong> Phone </strong> 0912 448 3694</p>
+    <p style="text-align: center; color: black"> <strong> Email </strong> shirutaa1@gmail.com</p>
+
+
+    <script>
+        var previousColor = '#2D2D2D';
+
+        function toggleBackground() {
+            var currentColor = document.body.style.backgroundColor;
+            var button = document.getElementById('bgButton');
+            
+            if (currentColor === 'white') {
+                document.body.style.backgroundColor = previousColor;
+                button.textContent = 'White';
+            } else {
+                previousColor = currentColor;
+                document.body.style.backgroundColor = 'white';
+                button.textContent = 'Dark';
+            }
+        }
+    </script>
 
     <footer>
-    
-        <p style="text-align: center;"> nothing else i just love my dogs (○｀ 3′○)</p>
+        <p style="text-align: center; color: black;">nothing else i just love my dogs (○｀ 3′○)</p>
     </footer>
+    <img src="2cat-removebg-preview.png" width="200" height="100" style="display: block; margin: auto;"/>
 </body>
 </html>
